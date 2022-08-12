@@ -10,4 +10,8 @@ rails generate draft:account user
 
 rails generate draft:resource listing owner_name:string status:string post_date:datetime sq_ft:integer images:image_upload owner_id:integer asking_price:integer city:string category_id:integer auction_close:datetime map_location:mappable_address
 
+rails generate draft:resource message reciever_id:integer sender_id:integer listing_id:integer text_message:text
 
+rails generate draft:resource bid listing_id:integer user_id:integer bid_amount:integer
+
+rails generate draft:resource category category_name:string

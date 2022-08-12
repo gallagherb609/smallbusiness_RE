@@ -2,22 +2,60 @@ Rails.application.routes.draw do
 
 
 
-  # Routes for the Listing resource:
+  # Routes for the Category resource:
 
   # CREATE
-  post("/insert_listing", { :controller => "listings", :action => "create" })
+  post("/insert_category", { :controller => "categories", :action => "create" })
           
   # READ
-  get("/listings", { :controller => "listings", :action => "index" })
+  get("/categories", { :controller => "categories", :action => "index" })
   
-  get("/listings/:path_id", { :controller => "listings", :action => "show" })
+  get("/categories/:path_id", { :controller => "categories", :action => "show" })
   
   # UPDATE
   
-  post("/modify_listing/:path_id", { :controller => "listings", :action => "update" })
+  post("/modify_category/:path_id", { :controller => "categories", :action => "update" })
   
   # DELETE
-  get("/delete_listing/:path_id", { :controller => "listings", :action => "destroy" })
+  get("/delete_category/:path_id", { :controller => "categories", :action => "destroy" })
+
+  #------------------------------
+
+  # Routes for the Bid resource:
+
+  # CREATE
+  post("/insert_bid", { :controller => "bids", :action => "create" })
+          
+  # READ
+  get("/bids", { :controller => "bids", :action => "index" })
+  
+  get("/bids/:path_id", { :controller => "bids", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_bid/:path_id", { :controller => "bids", :action => "update" })
+  
+  # DELETE
+  get("/delete_bid/:path_id", { :controller => "bids", :action => "destroy" })
+
+  #------------------------------
+
+  # Routes for the Message resource:
+
+  # CREATE
+  post("/insert_message", { :controller => "messages", :action => "create" })
+          
+  # READ
+  get("/messages", { :controller => "messages", :action => "index" })
+  
+  get("/messages/:path_id", { :controller => "messages", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_message/:path_id", { :controller => "messages", :action => "update" })
+  
+  # DELETE
+  get("/delete_message/:path_id", { :controller => "messages", :action => "destroy" })
 
   #------------------------------
 
