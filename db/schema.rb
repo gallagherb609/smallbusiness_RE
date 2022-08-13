@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_12_233934) do
+ActiveRecord::Schema.define(version: 2022_08_13_134906) do
 
   create_table "bids", force: :cascade do |t|
     t.integer "listing_id"
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 2022_08_12_233934) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string "owner_name"
+    t.string "status"
+    t.datetime "post_date"
+    t.integer "sq_ft"
+    t.string "image"
+    t.integer "owner_id"
+    t.integer "asking_price"
+    t.string "city"
+    t.integer "category_id"
+    t.datetime "auction_close"
+    t.integer "map_location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

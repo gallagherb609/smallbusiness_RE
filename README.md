@@ -8,7 +8,7 @@
 
 rails generate draft:account user
 
-rails generate draft:resource listing owner_name:string status:string post_date:datetime sq_ft:integer images:image_upload owner_id:integer asking_price:integer city:string category_id:integer auction_close:datetime map_location:mappable_address
+rails generate draft:resource listing owner_name:string status:string post_date:datetime sq_ft:integer image:string owner_id:integer asking_price:integer city:string category_id:integer auction_close:datetime map_location:integer
 
 rails generate draft:resource message reciever_id:integer sender_id:integer listing_id:integer text_message:text
 
