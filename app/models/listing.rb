@@ -18,4 +18,6 @@
 #  owner_id      :integer
 #
 class Listing < ApplicationRecord
+belongs_to :user
+
 end

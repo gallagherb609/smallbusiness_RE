@@ -18,3 +18,21 @@ rails generate draft:resource category category_name:string
 
 
 the_listing.map_location = params.fetch("query_map_location")
+
+add show details link to the table listings
+        <th>
+          <a href="/listings/<%= a_listing.id %>">
+            add Show details
+          </a>
+        </th>
+
+add back to application controller
+  <% else %>
+          <%li>
+            <a href="/listings"><%= @current_user.first_name %>'s' bookmarks</a>
+          </li>
+
+sign in and up bottom of the page
+<p>
+  Or, <a href="/user_sign_in">Sign in</a> instead.
+</p>

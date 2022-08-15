@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get("/", { :controller => "listings", :action => "index" })
 
   # CREATE
-  post("/insert_listing", { :controller => "listings", :action => "create" })
+  get("/insert_listing", { :controller => "listings", :action => "create" })
 
   # READ
   get("/listings", { :controller => "listings", :action => "index" })
