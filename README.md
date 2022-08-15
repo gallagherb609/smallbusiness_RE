@@ -15,3 +15,6 @@ rails generate draft:resource message reciever_id:integer sender_id:integer list
 rails generate draft:resource bid listing_id:integer user_id:integer bid_amount:integer
 
 rails generate draft:resource category category_name:string
+
+
+the_listing.map_location = params.fetch("query_map_location")

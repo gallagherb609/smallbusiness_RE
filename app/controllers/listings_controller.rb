@@ -26,10 +26,10 @@ class ListingsController < ApplicationController
     the_listing.image = params.fetch("query_image")
     the_listing.owner_id = params.fetch("query_owner_id")
     the_listing.asking_price = params.fetch("query_asking_price")
-    the_listing.city = params.fetch("query_city")
+    the_listing.neighborhood = params.fetch("query_neighborhood")
     the_listing.category_id = params.fetch("query_category_id")
     the_listing.auction_close = params.fetch("query_auction_close")
-    the_listing.map_location = params.fetch("query_map_location")
+    the_listing.address = params.fetch("address")
 
     if the_listing.valid?
       the_listing.save
@@ -48,12 +48,12 @@ class ListingsController < ApplicationController
     the_listing.post_date = params.fetch("query_post_date")
     the_listing.sq_ft = params.fetch("query_sq_ft")
     the_listing.image = params.fetch("query_image")
-    the_listing.owner_id = params.fetch("query_owner_id")
+    #the_listing.owner_id = params.fetch("query_owner_id")
     the_listing.asking_price = params.fetch("query_asking_price")
-    the_listing.city = params.fetch("query_city")
+    the_listing.neighborhood = params.fetch("neighborhood")
     the_listing.category_id = params.fetch("query_category_id")
     the_listing.auction_close = params.fetch("query_auction_close")
-    the_listing.map_location = params.fetch("query_map_location")
+    the_listing.address = params.fetch("address")
 
     if the_listing.valid?
       the_listing.save
