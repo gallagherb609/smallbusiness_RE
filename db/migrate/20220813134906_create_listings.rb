@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :status
       t.datetime :post_date
       t.integer :sq_ft
-      t.string :image
+      t.string :image_url
       t.integer :owner_id
       t.integer :asking_price
       t.string :city
