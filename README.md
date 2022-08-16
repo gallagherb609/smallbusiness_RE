@@ -36,3 +36,6 @@ sign in and up bottom of the page
 <p>
   Or, <a href="/user_sign_in">Sign in</a> instead.
 </p>
+
+Was making listings page home page
+get("/", { :controller => "listings", :action => "index" })

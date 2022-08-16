@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   # Routes for the Listing resource:
 
-  get("/", { :controller => "listings", :action => "index" })
+  get("/", { :controller => "home", :action => "index" })
 
   # CREATE
-  get("/insert_listing", { :controller => "listings", :action => "create" })
+  post("/insert_listing", { :controller => "listings", :action => "create" })
 
   # READ
   get("/listings", { :controller => "listings", :action => "index" })
