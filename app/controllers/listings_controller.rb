@@ -29,7 +29,7 @@ class ListingsController < ApplicationController
     the_listing.city = params.fetch("query_city")
     the_listing.category_id = params.fetch("query_category_id")
     the_listing.auction_close = params.fetch("query_auction_close")
-    the_listing.map_location = params.fetch("map_location")
+    the_listing.map_location = params.fetch("query_map_location")
 
     if the_listing.valid?
       the_listing.save
@@ -57,7 +57,7 @@ class ListingsController < ApplicationController
 
     if the_listing.valid?
       the_listing.save
-      redirect_to("/listings/#{the_listing.id}", { :notice => "Listing updated successfully."} )
+      redirect_to("/listings/#{the_listing.id}", { :notice => "Listing updated successfully." })
     else
       redirect_to("/listings/#{the_listing.id}", { :alert => the_listing.errors.full_messages.to_sentence })
     end
@@ -69,6 +69,6 @@ class ListingsController < ApplicationController
 
     the_listing.destroy
 
-    redirect_to("/listings", { :notice => "Listing deleted successfully."} )
+    redirect_to("/listings", { :notice => "Listing deleted successfully." })
   end
 end
