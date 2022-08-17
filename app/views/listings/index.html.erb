@@ -15,7 +15,7 @@
       Add a new listing
     </h2>
 
-    <form action="/insert_listing" method="post">
+    <form action="/insert_listing" method="post" class="form-horizontal" enctype="multipart/form-data">
       
       <div>
         <label for="owner_id_box">
@@ -62,7 +62,7 @@
           Image
         </label>
 
-        <input type="text" id="image_box" name="query_image">
+        <input type="file" id="image_box" name="query_image">
       </div>
 
       <div>
@@ -204,10 +204,6 @@
         </td>
 
         <td>
-          <%= a_listing.owner_id %>
-        </td>
-
-        <td>
           <%= a_listing.asking_price %>
         </td>
 
@@ -227,12 +223,6 @@
           <%= a_listing.map_location %>
         </td>
 
-        <td>
-          <%= time_ago_in_words(a_listing.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_listing.updated_at) %> ago
-        </td>
 
         <td>
           <a href="/listings/<%= a_listing.id %>">

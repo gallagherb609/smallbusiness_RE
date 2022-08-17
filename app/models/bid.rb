@@ -10,4 +10,5 @@
 #  user_id    :integer
 #
 class Bid < ApplicationRecord
+  belongs_to :listing
 end

@@ -39,3 +39,15 @@ sign in and up bottom of the page
 
 Was making listings page home page
 get("/", { :controller => "listings", :action => "index" })
+
+
+<td>
+          <%= a_listing.owner_id %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_listing.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_listing.updated_at) %> ago
+        </td>

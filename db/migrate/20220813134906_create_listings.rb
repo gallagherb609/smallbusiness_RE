@@ -9,9 +9,9 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.integer :owner_id
       t.integer :asking_price
       t.string :city
-      t.integer :category_id
+      t.string :category_id
       t.datetime :auction_close
-      t.integer :map_location
+      t.string :map_location
 
       t.timestamps
     end
