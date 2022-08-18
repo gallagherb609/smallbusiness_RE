@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   def index
-    matching_listings = Listing.all
+    matching_listings = Listing.order(:created => :desc)
 
     @list_of_listings = matching_listings.order({ :created_at => :desc })
 
@@ -24,7 +24,7 @@ class ListingsController < ApplicationController
     the_listing.post_date = params.fetch("query_post_date")
     the_listing.sq_ft = params.fetch("query_sq_ft")
     the_listing.image = params.fetch("query_image")
-    the_listing.owner_id = params.fetch("query_owner_id")
+    the_listing.owner_id = session[:owner_id]
     the_listing.asking_price = params.fetch("query_asking_price")
     the_listing.city = params.fetch("query_city")
     the_listing.category_id = params.fetch("query_category_id")

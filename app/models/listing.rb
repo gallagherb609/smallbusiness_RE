@@ -28,5 +28,5 @@ class Listing < ApplicationRecord
   validates(:auction_close, { :presence => true })
   validates(:asking_price, { :presence => true })
 
-  #mount_uploader :image_box, image_boxUploader
+  mount_uploader :image, ImageBoxUploader
 end
